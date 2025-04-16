@@ -1,0 +1,28 @@
+<html>
+  <body>
+    <script src="./popup.js"></script>
+    <h1>Green cross</h1>
+    <div style="display: inline-flex;">
+        <input type="checkbox" id="check-block"/>
+        <label for="check-block">Hide Subtitles</label>
+      </div>
+    <div id="rgb">
+      <div data-color="red"style="display: inline-flex;">
+        <label for="slider-red">Red</label>
+        <input type="range" id="slider-red" min="0" max="255"/>
+        <input type="number" id="input-red" name="val-red" min="0" max="255">
+      </div>
+      <div data-color="green"style="display: inline-flex;">
+        <label for="slider-green">Green</label>
+        <input type="range" id="slider-green" min="0" max="255"/>
+        <input type="number" id="input-green" name="val-green" min="0" max="255">
+      </div>
+      <div data-color="blue"style="display: inline-flex;">
+        <label for="slider-blue">Blue</label>
+        <input type="range" id="slider-blue" min="0" max="255"/>
+        <input type="number" id="input-blue" name="val-blue" min="0" max="255">
+      </div>
+    </div>
+    <button id="reset">Reset Size & Position</button>
+  </body>
+</html>

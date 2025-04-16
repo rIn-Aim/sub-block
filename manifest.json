@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Hide Subs",
+  "version": "1.0.0",
+  "description": "An extension for hiding hardcoded subtitles.",
+  "icons": {
+    "128": "img/hige_chobihige_128.png"
+  },
+  "action": {
+    "default_title": "Block Subtitles",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["scripting", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions":["<all_urls>"],
+  "commands": {
+    "toggle-cover": {
+      "suggested_key": "Ctrl+Shift+2",
+      "description": "Toggle Cover"
+    },
+    "reset": {
+      "suggested_key": "Ctrl+Shift+1",
+      "description": "Reset Cover"
+    }
+  }
+}
