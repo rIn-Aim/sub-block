@@ -23,6 +23,30 @@
     "reset": {
       "suggested_key": "Ctrl+Shift+1",
       "description": "Reset Cover"
+    },
+    "move-left": {
+      "description": "Move Cover to the Left"
+    },
+    "move-right": {
+      "description": "Move Cover to the Right"
+    },
+    "move-up": {
+      "description": "Move Cover Up"
+    },
+    "move-down": {
+      "description": "Move Cover Down"
+    },
+    "increase-height": {
+      "description": "Increase Cover Height"
+    },
+    "decrease-height": {
+      "description": "Decrease Cover Height"
+    },
+    "increase-width": {
+      "description": "Increase Cover Width"
+    },
+    "decrease-width": {
+      "description": "Decrease Cover Width"
     }
   }
 }

@@ -40,15 +40,54 @@ chrome.commands.onCommand.addListener((command) => {
 						    val: response.data.content
 						});
 	      			}
-	      			//sendResponse(response)
 	      		})
 	    	})
 	  		break;
 	  	case "reset":
 	  		chrome.tabs.query({ active:true, currentWindow:true}, function(tab){
 	      		chrome.tabs.sendMessage(tab[0].id, {action: "reset"}, function(response){
-	      			//sendResponse(response)
+	      			console.log(response);
 	      		})
+	    	})
+	  		break;
+	  	case "move-left":
+	  		chrome.tabs.query({ active:true, currentWindow:true}, function(tab){
+	      		chrome.tabs.sendMessage(tab[0].id, {action: "move", direction: "left"})
+	    	})
+	  		break;
+	  	case "move-right":
+	  		chrome.tabs.query({ active:true, currentWindow:true}, function(tab){
+	      		chrome.tabs.sendMessage(tab[0].id, {action: "move", direction: "right"})
+	    	})
+	  		break;
+	  	case "move-up":
+	  		chrome.tabs.query({ active:true, currentWindow:true}, function(tab){
+	      		chrome.tabs.sendMessage(tab[0].id, {action: "move", direction: "up"})
+	    	})
+	  		break;
+	  	case "move-down":
+	  		chrome.tabs.query({ active:true, currentWindow:true}, function(tab){
+	      		chrome.tabs.sendMessage(tab[0].id, {action: "move", direction: "down"})
+	    	})
+	  		break;
+	  	case "increase-height":
+	  		chrome.tabs.query({ active:true, currentWindow:true}, function(tab){
+	      		chrome.tabs.sendMessage(tab[0].id, {action: "scale", scale: {dimension: "height", change: "increase"}})
+	    	})
+	  		break;
+	  	case "decrease-height":
+	  		chrome.tabs.query({ active:true, currentWindow:true}, function(tab){
+	      		chrome.tabs.sendMessage(tab[0].id, {action: "scale", scale: {dimension: "height", change: "decrease"}})
+	    	})
+	  		break;
+	  	case "increase-width":
+	  		chrome.tabs.query({ active:true, currentWindow:true}, function(tab){
+	      		chrome.tabs.sendMessage(tab[0].id, {action: "scale", scale: {dimension: "width", change: "increase"}})
+	    	})
+	  		break;
+	  	case "decrease-width":
+	  		chrome.tabs.query({ active:true, currentWindow:true}, function(tab){
+	      		chrome.tabs.sendMessage(tab[0].id, {action: "scale", scale: {dimension: "width", change: "decrease"}})
 	    	})
 	  		break;
 	}
